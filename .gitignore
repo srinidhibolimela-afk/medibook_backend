@@ -1,0 +1,42 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IDE files ###
+.idea
+*.iws
+*.iml
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+
+### Secrets and Local Configs ###
+set-env.bat
+.env
+.env.*
+application-local.properties
+*.log
+# Local application configuration
+backend/src/main/resources/application.properties
+backend/target/
+frontend/node_modules/
+frontend/dist/
+
+# Database backups and local exports
+MediBook_Backup/
+*_backup.sql
+# Local configuration and secrets
+backend/src/main/resources/application.properties
+backend/target/
+frontend/node_modules/
+frontend/dist/
+
+# Personal database backups
+MediBook_Backup/
+*_backup.sql
+/backend/src/main/resources/application.properties.git-backup/
+/src/main/resources/application.properties
+.git-backup/
