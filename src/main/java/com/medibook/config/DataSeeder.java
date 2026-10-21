@@ -96,11 +96,17 @@ public class DataSeeder implements CommandLineRunner {
             return;
         }
         UserAccount a = new UserAccount();
-        a.setEmail(email.trim().toLowerCase());
-        a.setPasswordHash(encoder.encode(password));
-        a.setFullName(props.seed().adminName());
-        a.setRole(Role.ADMIN);
-        users.save(a);
+a.setEmail(email.trim().toLowerCase());
+a.setPasswordHash(encoder.encode(password));
+
+String adminName = props.seed().adminName();
+if (adminName == null || adminName.isBlank()) {
+    adminName = "MediBook Admin";
+}
+a.setFullName(adminName);
+
+a.setRole(Role.ADMIN);
+users.save(a);
         log.info("Admin account created for {}", a.getEmail());
     }
 
